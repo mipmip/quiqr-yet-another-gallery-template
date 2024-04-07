@@ -25,6 +25,8 @@ params:
     links:
       - name: films
         url: /gallery/films/
+      - name: pictures
+        url: /gallery/pictures
       - name: contact
         url: /pages/contact
   footer:
