@@ -1,0 +1,1 @@
+# quiqr-yet-another-gallery-template
