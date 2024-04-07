@@ -1,0 +1,116 @@
+languageCode: en-us
+title: Yet Another Gallery
+theme: AutoPhugo
+disableKinds:
+  - taxonomy
+  - term
+baseURL: /
+services:
+  googleAnalytics: {}
+markup:
+  goldmark:
+    renderer:
+      hardWraps: true
+      unsafe: true
+params:
+  description: I am a movie star, work, etc....
+  keywords: Pim Hawinkels, cameraman, cinema, vpro
+  images_downloadable: false
+  showBreadCrum: false
+  favicon: /favicon/apple-touch-icon.png
+  author:
+    name: I am a moviestar
+    email: info@example.com
+  header:
+    links:
+      - name: films
+        url: /gallery/films/
+      - name: contact
+        url: /pages/contact
+  footer:
+    copyright2: c2
+    paragraph:
+      headline: Contact me
+      text: >-
+        This is my portfolio. Photo's and video's. Call me or send me a mail..
+
+
+        [john@doe.com](mailto:john@doe.com) [+31 6
+        1234567890](tel:+3161234567890)
+    social:
+      headline: Follow me
+      links:
+        - label: Twitter
+          url: '#'
+          icon: fa-twitter
+        - label: Facebook
+          url: '#'
+          icon: fa-facebook
+        - label: Instagram
+          url: '#'
+          icon: fa-instagram
+        - label: LinkedIn
+          url: '#'
+          icon: fa-linkedin
+    contact:
+      hide: true
+      formspreeID: myuniqueID
+      headline: Get in touch
+      buttonText: Send
+      resetText: Reset
+      name:
+        text: Name *
+        warning: Please, enter your name
+      email:
+        text: Email *
+        warning: Please, enter your email.
+      message:
+        text: Message *
+        warning: Please, enter your message
+    copyright:
+      name: © 2024 - Quiqr
+  cover_slide:
+    images:
+      - image: e8bfd72154012e83ac6e9e85862010973c9642d6.jpg
+        resources: []
+      - image: hero_ima01.png
+      - image: hero_ima03.png
+      - image: maxresdefault.jpg
+      - image: >-
+          MV5BNDFkMWMxY2QtYjQyNi00MjkwLTljYjMtYzUwZDlhODlhNzY3XkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_.jpg
+      - image: hero_ima05.png
+      - image: x1080.jpg
+    animation: ''
+    overlay: css/overlays/04.png
+    timer: false
+    shuffle: true
+    delay: 5000
+  logo: logo.png
+  logoWidthCss: 20em
+  disable_right_click: false
+  thumb_ratio: 21
+  border_radius: 47
+  thumb_width: 600
+  full_width: 900
+  full_quality: 90
+  thumb_quality: 90
+  resources: []
+  text_location: ''
+  thumb_padding: 0
+  show_popup_nav_arrows: false
+  popup_width: 74
+  popup_settings:
+    popup_width: 50
+    show_popup_nav_arrows: true
+    max_frame_height_percentage: 78
+  thumb_settings:
+    thumb_width: 480
+    thumb_quality: 50
+    full_width: 960
+    full_quality: 90
+  video_player:
+    vimeo_default_query_string: '?share=copy&autoplay=0&background=1'
+  primary_font: Noto Sans
+  menu_font: Yeseva One
+  link_color: '#B804B8'
+  use_custom_fonts: false

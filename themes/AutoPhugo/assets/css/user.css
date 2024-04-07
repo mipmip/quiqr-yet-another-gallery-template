@@ -1,0 +1,156 @@
+/* Override this by placing your own custom "user.css" in your "assets/css" directory.  When you do, this file will automatically be ignored! */
+
+.credits {
+  line-height: 1.4em;
+}
+
+.logoimg {
+  width:20em;
+}
+
+#header {
+  background: #1f2224aa;
+  top: 0;
+  height: 5em;
+  left: 0;
+  line-height: 2.5em;
+  padding: 2em 2.5em 0 2.5em;
+  position: fixed;
+  user-select: none;
+  width: 100%; z-index: 102;
+}
+
+#header h1 { color: #a0a0a1; display: inline-block; font-size: 1em; line-height: 1; margin: 0; vertical-align: middle; }
+#header h1 a { border: 0; color: inherit; }
+#header h1 a:hover { color: inherit !important; }
+
+#header nav {
+  position: absolute;
+  right: 0;
+  top: 2em;
+  padding: 0 2em;
+}
+
+#header nav > ul { list-style: none; margin: 0; padding: 0; }
+#header nav > ul > li { display: inline-block; padding: 0; }
+#header nav > ul > li a {
+  -moz-transition: background-color 0.5s ease;
+  -webkit-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  border: 0;
+  color: #ffffff;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: 0 0.4em;
+}
+#header nav > ul > li a.icon:before { color: #505051; float: right; margin-left: 0.75em; }
+
+.nav-toggle {
+  display:none;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 2.4rem;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+
+}
+.nav-toggle:active,
+.nav-toggle:hover {
+  box-shadow: none;
+  background-color: transparent !important;
+}
+
+.burger-wrap {
+  left: auto;
+  right: -1rem;
+}
+.burger-wrap {
+  position: absolute;
+  top: 55%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2000;
+}
+
+.nav-toggle .icon-bar {
+  display: block;
+  width: 1.4rem;
+  height: .05rem;
+  background-color: #fff;
+  -moz-transition: background-color .2s;
+  -o-transition: background-color .2s;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+.nav-toggle .icon-bar + .icon-bar {
+  margin-top: .4rem;
+}
+
+@media screen and (max-width: 936px) {
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  #main {
+    margin-top: 0em;
+  }
+
+  body { padding: 4em 0 0 0; }
+
+  #header {
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    bottom: auto;
+    height: 4em;
+    padding: 1.5em 2.5em 0 !important;
+    top: 0;
+  }
+  body.loading #header { -moz-transform: translateY(-3.4em); -webkit-transform: translateY(-3.4em); -ms-transform: translateY(-3.4em); transform: translateY(-3.4em); }
+
+  #header h1 {
+    font-size: 0.9em;
+  }
+  #header nav {
+    display: none;
+    left: 0;
+    padding: 1.3em;
+    top: 3.9em;
+    background-color: #212426;
+  }
+
+  #header nav > ul > li a {
+    font-size: 0.9em;
+    padding: 0 1.15em;
+  }
+
+  #header nav > ul > li {
+    display: block;
+
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .logoimg {
+    width: 15em;
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+{{- partial "lang.html" . }}
+<head>
+    <title>
+    {{- block "title" . }}
+        {{- with .Title }}{{ . }} - {{ end }}{{ .Site.Title -}}
+    {{- end -}}
+    </title>
+
+  {{ partialCached "style.html" . }}
+
+  {{- partial "head.html" . }}
+  {{ $rightclickdisable := true }}
+  {{- if .Site.Params.disable_right_click -}}
+  {{ $rightclickdisable = false }}
+  {{- end -}}
+
+
+</head>
+<body class="loading" oncontextmenu="return {{- $rightclickdisable -}};">
+{{- partial "scripts.html" . }}
+    <div id="wrapper">
+        {{- partial "header.html" . }}
+        <div id="main">
+            {{ block "main" . }}
+            {{ end }}
+        </div>
+        {{- partial "footer.html" . }}
+    </div>
+</body>
+</html>

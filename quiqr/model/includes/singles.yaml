@@ -1,0 +1,387 @@
+- key: imagescover
+  title: Images for cover
+  hidePreviewIcon: true
+  hideExternalEditIcon: true
+  hideSaveButton: true
+  file: static/.pogo-cover.md
+  fields:
+    - key: file
+      type: bundle-manager
+      path: "/static/cover"
+      extensions:
+        - jpg
+        - jpeg
+        - png
+      fields:
+        - key: thumb
+          title: Thumb
+          type: bundle-image-thumbnail
+
+
+- key: imagesgal
+  title: Images for galleries
+  hidePreviewIcon: true
+  hideExternalEditIcon: true
+  hideSaveButton: true
+  file: static/.pogo-images.md
+  fields:
+    - key: file
+      type: bundle-manager
+      path: "/assets/gallery"
+      extensions:
+        - jpg
+        - jpeg
+        - png
+      fields:
+        - key: thumb
+          title: Thumb
+          type: bundle-image-thumbnail
+
+- key: videos
+  title: Video's
+  hidePreviewIcon: true
+  hideExternalEditIcon: true
+  hideSaveButton: true
+  file: static/.pogo-downloads.md
+  fields:
+    - key: file
+      type: bundle-manager
+      path: "/static/videos"
+      extensions:
+        - mp4
+        - mov
+        - gif
+      fields:
+        - key: thumb
+          title: Thumb
+          type: bundle-image-thumbnail
+
+- key: mainConfig
+  title: General
+  hidePreviewIcon: true
+  file: config.yaml
+  fields:
+
+    - key: title
+      title: Site Title
+      type: string
+      tip: Your page title.
+
+    - key: baseURL
+      title: Base URL
+      type: string
+      tip: Your site URL.
+
+    - key: params
+      type: pull
+      fields:
+
+        - key: description
+          type: string
+
+- key: aboutConf
+  title: About
+  hidePreviewIcon: true
+  file: config.yaml
+  fields:
+
+    - key: params
+      type: pull
+      fields:
+
+        - key: description
+          type: string
+
+        - key: author
+          type: pull
+          fields:
+            - type: string
+              title: Author
+              key: name
+
+            - type: string
+              key: email
+
+        - key: footer
+          type: pull
+          fields:
+
+#            - key: paragraph
+#              type: pull
+#              fields:
+#                - key: headline
+#                  title: About headline
+#                  type: string
+#
+#                - key: text
+#                  title: About text
+#                  type: string
+#                  multiLine: true
+
+#            - key: social
+#              type: pull
+#              fields:
+#                - key: headline
+#                  title: Social headline
+#                  type: string
+#                - key: links
+#                  title: Social Links
+#                  type: accordion
+#                  fields:
+#                    - key: label
+#                      type: string
+#                      arrayTitle: true
+#                    - key: url
+#                      type: string
+#                    - key: icon
+#                      type: string
+
+            - key: copyright
+              type: pull
+              fields:
+                - key: name
+                  title: copyright
+                  type: string
+
+#            - key: contact
+#              title: contactForm
+#              type: pull
+#              fields:
+#                - key: hide
+#                  title: Hide contact form
+#                  type: boolean
+
+- key: mainCover
+  title: Cover Slide
+  hidePreviewIcon: true
+  file: config.yaml
+  fields:
+
+    - key: params
+      type: pull
+      fields:
+
+        - key: cover_slide
+          type: pull
+          fields:
+            - key: delay
+              title: duration in milliseconds
+              type: number
+              default: 5000
+
+            - key: shuffle
+              title: Shuffle images
+              type: boolean
+            - key: timer
+              title: Show timer bar
+              type: boolean
+
+            - key: overlay
+              type: select
+              options:
+                - text: none
+                  value: ""
+                - "css/overlays/01.png"
+                - "css/overlays/02.png"
+                - "css/overlays/03.png"
+                - "css/overlays/04.png"
+                - "css/overlays/05.png"
+                - "css/overlays/06.png"
+                - "css/overlays/07.png"
+                - "css/overlays/08.png"
+                - "css/overlays/09.png"
+
+            - key: animation
+              type: select
+              options:
+                - text: none
+                  value: ""
+                - "kenburns"
+
+            - key: images
+              title: images
+              type: accordion
+              fields:
+                - key: image
+                  type: image-select
+                  path: /static/cover
+                  arrayTitle: true
+                #                - key: disabled
+                #                  type: boolean
+
+- key: mainMenu
+  hidePreviewIcon: true
+  title: Menu
+  file: config.yaml
+  fields:
+
+    - key: params
+      type: pull
+      fields:
+        - key: showBreadCrum
+          title: Show Breadcrum
+          type: boolean
+
+        - key: header
+          type: pull
+          fields:
+            - key: links
+              title: menu
+              type: accordion
+              fields:
+                - key: name
+                  type: string
+                  arrayTitle: true
+                - key: url
+                  type: string
+
+- key: galleryConfig
+  title: Gallery
+  hidePreviewIcon: true
+  file: config.yaml
+  fields:
+
+    - key: params
+      type: pull
+      fields:
+
+        - key: images_downloadable
+          title: Media Downloadable
+          type: boolean
+
+        - key: popup_settings
+          title: Popup Settings
+          type: nest
+          fields:
+            #          - key: popup_width
+            #            type: number
+          - key: max_frame_height_percentage
+            title: max frame height percentage
+            type: slider
+            max: 100
+            min: 0
+            step: 1
+            default: 70
+
+          - key: show_popup_nav_arrows
+            type: boolean
+
+        #        - key: thumb_ratio
+        #          type: number
+        - key: thumb_settings
+          title: Thumbs Settings
+          type: nest
+          fields:
+
+            #          - key: thumb_padding
+            #            type: number
+            #
+          #        - key: border_radius
+          #          type: number
+
+          #        - key: text_location
+          #          type: select
+          #          options:
+          #            - key: bottomleft
+          #            - key: center
+          - key: thumb_width
+            default: 480
+            type: number
+          - key: thumb_quality
+            default: 50
+            type: number
+          - key: full_width
+            default: 960
+            type: number
+          - key: full_quality
+            default: 90
+            type: number
+
+        #        - key: video_player
+        #          title: Video Player Settings
+        #          type: nest
+        #          fields:
+        #           - key: vimeo_default_query_string
+        #             type: string
+        #             default: "?share=copy&autoplay=0&?background=1"
+
+- key: securityConf
+  title: Security
+  file: config.yaml
+  hidePreviewIcon: true
+  fields:
+
+    - key: params
+      type: pull
+      fields:
+        - key: disable_right_click
+          type: boolean
+          title: Disable right click
+
+- key: logoConf
+  title: Logo
+  file: config.yaml
+  hidePreviewIcon: true
+  fields:
+
+    - key: params
+      type: pull
+      fields:
+        - key: logoWidthCss
+          type: string
+          title: Logo width as css
+
+        - key: logo
+          type: image-select
+          path: /static/logo
+
+        #        - key: favicon
+        #          type: image-select
+        #          path: /static/favicon
+
+- key: design
+  title: Style
+  file: config.yaml
+  hidePreviewIcon: true
+  fields:
+
+    # menu: arial
+    # thumbs: oswald/roboto slab
+    # paragraph text: helvetica
+
+    - key: params
+      type: pull
+      fields:
+
+        - key: use_custom_fonts
+          type: boolean
+
+        - key: "primary_font"
+          title: "Main Text Font"
+          type: "font-picker"
+          tip: "choose your font"
+          limit: 100
+          categories:
+            - sans-serif
+
+        - key: "menu_font"
+          title: "Menu Font"
+          type: "font-picker"
+          tip: "choose your font"
+          limit: 300
+
+        - key: link_color
+          type: color
+          autosave: true
+
+        #        - key: link_color_darker
+        #          type: color
+        #          autosave: true
+
+        #        - key: secondary_color
+        #          type: color
+        #          autosave: true
+        #
+        #        - key: secondary_color_darker
+        #          type: color
+        #          autosave: true

@@ -1,0 +1,16 @@
+<div class="burger-wrap">
+  <button id="toggle" class="nav-toggle" type="button" aria-hidden="false" onclick="toggle_menu()">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>
+<nav>
+  <ul>
+    {{ $url := .RelPermalink }}<!---->
+
+    {{ range .Site.Params.header.links }}
+    <li><a href="{{ .url }}" class="icon {{ .icon }}  {{ if eq .url $url }}active{{ end }} ">{{ .name }}</a></li>
+    {{ end }}
+  </ul>
+	</nav>

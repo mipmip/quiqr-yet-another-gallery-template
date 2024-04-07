@@ -1,0 +1,32 @@
+hugover: extended_0.90.1
+serve:
+  - key: default
+    config: config.yaml
+build:
+  - key: default
+    config: config.yaml
+menu:
+  - key: content
+    title: Content
+    menuItems:
+      - key: galleries
+      - key: pages
+
+  - key: assets
+    title: Assets
+    menuItems:
+      - key: imagesgal
+      - key: imagescover
+
+  - key: settings
+    title: Settings
+    menuItems:
+      - key: mainConfig
+      - key: mainMenu
+      - key: aboutConf
+      - key: logoConf
+      - key: mainCover
+      - key: galleryConfig
+      - key: design
+      - key: securityConf
+

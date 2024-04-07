@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<script>
+
+$( document ).ready(function() {
+
+  $("body").vegas({
+    loop: true,
+    delay: {{- .Site.Params.cover_slide.delay -}},
+    overlay: {{- .Site.Params.cover_slide.overlay -}},
+    shuffle: {{- .Site.Params.cover_slide.shuffle -}},
+    timer: {{- .Site.Params.cover_slide.timer -}},
+    animation: {{- .Site.Params.cover_slide.animation -}},
+    slides: [
+      {{ range .Site.Params.cover_slide.images }}
+      {
+         src: "/cover/{{ .image }}"
+      },
+      {{ end }}
+    ]
+  });
+});
+
+</script>
+
+{{ end }}

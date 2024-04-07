@@ -1,0 +1,43 @@
+<style>
+
+{{ if $.Site.Params.use_custom_fonts }}
+@import url('https://fonts.googleapis.com/css2?family={{ $.Site.Params.primary_font }}:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family={{ $.Site.Params.menu_font }}:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+body, input, select, textarea { font-family:{{ $.Site.Params.primary_font }}, Helvetica, sans-serif !important; }
+#header nav > ul > li { font-family:{{ $.Site.Params.menu_font }}, Helvetica, sans-serif !important; }
+
+{{ end }}
+
+#main .thumb::after,
+#main .thumb a {
+  margin: calc(0.01*{{ site.Params.thumb_padding }}vw) !important;
+}
+
+#header nav > ul > li a {
+  color: white !important;
+}
+
+a {
+  color: {{ site.Params.link_color }} !important;
+}
+
+#header nav > ul > li a:hover,
+#header nav > ul > li a.active {
+  color: {{ site.Params.link_color }} !important;
+}
+
+
+{{ if not site.Params.show_popup_nav_arrows }}
+.mfp-container .nav-right,
+.mfp-container .nav-left {
+    display: none !important;
+}
+{{ end }}
+
+.mfp-iframe-holder .mfp-content {
+  max-height: {{ $.Site.Params.popup_settings.max_frame_height_percentage}}vh;
+}
+
+</style>
+
+

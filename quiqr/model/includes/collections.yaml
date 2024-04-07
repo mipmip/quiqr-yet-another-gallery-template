@@ -1,0 +1,60 @@
+- key: pages
+  title: Pages
+  folder: content/pages
+  previewUrlBase: /pages
+  extension: md
+  dataformat: yaml
+  itemtitle: Page
+  fields:
+    - key: title
+      type: string
+
+    - key: mainContent
+      type: markdown
+
+- key: galleries
+  title: Galleries
+  folder: content/gallery
+  previewUrlBase: /gallery/
+  extension: md
+  dataformat: yaml
+  itemtitle: Gallery
+  fields:
+    - key: title
+      type: string
+
+    - key: mainContentInfo
+      type: hidden
+
+    - key: mediaItems
+      type: accordion
+      fields:
+        - arrayTitle: true
+          key: phototitle
+          type: string
+
+        - key: description
+          type: string
+          multiLine: true
+
+        - key: credits
+          type: string
+          multiLine: true
+        - key: disabled
+          type: boolean
+
+        #        - key: weight
+        #          type: number
+
+        - key: src
+          title: Image
+          type: image-select
+          path: "/assets/gallery"
+          buttonTitle: Select Image
+
+        - key: show_video_player
+          type: boolean
+
+        - key: video_src
+          title: Video URL
+          type: string
