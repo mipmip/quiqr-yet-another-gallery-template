@@ -1,7 +1,6 @@
 <header id="header">
     <h1>
 
-
       <!-- Grab the base URL, pull out the path, then count directories -->
       {{- $base_url_parsed := urls.Parse .Site.BaseURL -}}
       {{- $base_dir := trim $base_url_parsed.Path "/" -}}

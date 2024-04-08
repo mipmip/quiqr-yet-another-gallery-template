@@ -27,6 +27,7 @@
     <!-- Post Nav -->
     {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
     {{ if and (gt (len $pages) 1) (in $pages . ) }}
+    <!--
     <nav class="post-nav">
       {{ with $pages.Next . }}
       <a class="prev" href="{{ .Permalink }}"><span>←</span><span>{{ .Name }}</span></a>
@@ -34,6 +35,7 @@
       <a class="next" href="{{ .Permalink }}"><span>{{ .Name }}</span><span>→</span></a>
       {{ end }}
     </nav>
+    -->
     {{ end }}
 
     <!-- Disqus -->

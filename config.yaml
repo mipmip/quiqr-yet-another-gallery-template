@@ -1,10 +1,10 @@
 languageCode: en-us
 title: Yet Another Gallery
-theme: AutoPhugo
+theme: yag
 disableKinds:
   - taxonomy
   - term
-baseURL: /
+baseURL: https://mipmip.github.io/quiqr-yet-another-gallery-template/
 services:
   googleAnalytics: {}
 markup:
@@ -14,7 +14,7 @@ markup:
       unsafe: true
 params:
   description: I am a movie star, work, etc....
-  keywords: Pim Hawinkels, cameraman, cinema, vpro
+  keywords: Quiqr, Hugo, Gallery, Theme, Template
   images_downloadable: false
   showBreadCrum: false
   favicon: /favicon/apple-touch-icon.png
@@ -29,6 +29,8 @@ params:
         url: /gallery/pictures
       - name: contact
         url: /pages/contact
+      - name: etc...
+        url: /pages/etc
   footer:
     copyright2: c2
     paragraph:
@@ -104,7 +106,7 @@ params:
   popup_settings:
     popup_width: 50
     show_popup_nav_arrows: true
-    max_frame_height_percentage: 78
+    max_frame_height_percentage: 47
   thumb_settings:
     thumb_width: 480
     thumb_quality: 50

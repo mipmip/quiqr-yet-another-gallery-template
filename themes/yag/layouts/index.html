@@ -14,7 +14,7 @@ $( document ).ready(function() {
     slides: [
       {{ range .Site.Params.cover_slide.images }}
       {
-         src: "/cover/{{ .image }}"
+         src: "{{- $.Site.BaseURL -}}cover/{{ .image }}"
       },
       {{ end }}
     ]
