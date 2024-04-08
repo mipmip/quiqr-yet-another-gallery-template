@@ -2,7 +2,7 @@
 
 <a href="https://github.com/quiqr/quiqr-community-templates"><img src="https://quiqr.org/quir-community-templates-badge.svg" /></a>
 
-Quiqr template based for stylish video or photo galleries.
+Hugo / Quiqr template for stylish video or photo galleries.
 
 [Checkout the demo](https://mipmip.github.io/quiqr-yet-another-gallery-template/)!
 
