@@ -106,7 +106,7 @@ params:
   popup_settings:
     popup_width: 50
     show_popup_nav_arrows: true
-    max_frame_height_percentage: 47
+    max_frame_height_percentage: 64
   thumb_settings:
     thumb_width: 480
     thumb_quality: 50
@@ -114,7 +114,7 @@ params:
     full_quality: 90
   video_player:
     vimeo_default_query_string: '?share=copy&autoplay=0&background=1'
-  primary_font: Noto Sans
-  menu_font: Yeseva One
+  primary_font: Anton
+  menu_font: Acme
   link_color: '#B804B8'
   use_custom_fonts: false
