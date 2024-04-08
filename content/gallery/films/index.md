@@ -47,9 +47,11 @@ mediaItems:
     disabled: true
     src: cb6dd0a5f551eec35f89694ba50d866d.jpg
     show_video_player: true
-    video_src: https://youtu.be/eRsGyueVLvQ
+    video_src: https://youtu.be/C0DPdy98e4c?feature=shared
 
 ---
+
+
 
 
 
